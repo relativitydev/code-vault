@@ -44,8 +44,8 @@ using (IRSAPIClient proxy =  new RSAPIClient(
 
 Uri restUri = new Uri("https://my-instance.com/Relativity.REST/api");
 var creds = new Relativity.Services.ServiceProxy.UsernamePasswordCredentials(username, password);
-var svcFactory = new Relativity.Services.ServiceProxy.ServiceFactory(
-                            new ServiceFactorySettings(servicesUri, restUri, creds));
+var settings = new Relativity.Services.ServiceFactorySettings(servicesUri, restUri, creds);
+var svcFactory = new Relativity.Services.ServiceProxy.ServiceFactory(settings);
 using (IObjectManager objManager = svcFactory.CreateProxy<IObjectManager>())
 {
     // CRUDQ on objects
