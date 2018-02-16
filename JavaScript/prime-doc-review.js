@@ -7,7 +7,7 @@ function limitDocList(docIds)
 {
     var baseUrl = document.location.origin;
     // specify the URL we are to return to after
-    var returnUrl = baseUrl + "myCustomPageURL";
+    var returnUrl = document.location.href; // or specify custom page URL
     var url = baseUrl + "/Relativity/PageBaseService.asmx/PrimeDocReview";
     var settings = 
     {
