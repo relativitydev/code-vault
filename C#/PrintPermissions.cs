@@ -49,13 +49,13 @@ public static class PrintPermissions
     {
         GroupSelector sel = await mgr.GetWorkspaceGroupSelectorAsync(workspaceId);
         Console.WriteLine("Enabled groups:");
-        foreach (var group in sel.EnabledGroups)
+        foreach (GroupRef group in sel.EnabledGroups)
         {
             Console.WriteLine(group.Name);
         }
         Console.WriteLine("------");
         Console.WriteLine("Disabled Groups:");
-        foreach (var group in sel.DisabledGroups)
+        foreach (GroupRef group in sel.DisabledGroups)
         {
             Console.WriteLine(group.Name);
         }
