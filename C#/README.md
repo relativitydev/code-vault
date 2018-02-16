@@ -53,3 +53,6 @@ using (IObjectManager objManager = svcFactory.CreateProxy<IObjectManager>())
 }
 
 ```
+
+## File Descriptions
+* [PrintPermissions.cs](PrintPermissions.cs) - uses the `IPermissionManager` interface to print out permissions
