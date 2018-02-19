@@ -55,4 +55,6 @@ using (IObjectManager objManager = svcFactory.CreateProxy<IObjectManager>())
 ```
 
 ## File Descriptions
+* [CustodianPreSave.cs](CustodianPreSave.cs) - examples on getting/setting fields of various types on an event handler
 * [PrintPermissions.cs](PrintPermissions.cs) - uses the `IPermissionManager` interface to print out permissions
+
