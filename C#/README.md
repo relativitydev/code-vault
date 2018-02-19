@@ -55,6 +55,7 @@ using (IObjectManager objManager = svcFactory.CreateProxy<IObjectManager>())
 ```
 
 ## File Descriptions
+* [BatchRead.cs](BatchRead.cs) - executes the `Repositories.Document.Read(IEnumerable<int>)` method in batches
 * [CustodianPreSave.cs](CustodianPreSave.cs) - examples on getting/setting fields of various types on an event handler
 * [PrintPermissions.cs](PrintPermissions.cs) - uses the `IPermissionManager` interface to print out permissions
 
