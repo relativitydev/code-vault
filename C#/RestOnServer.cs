@@ -1,6 +1,9 @@
 /*
  * This snippet demonstrates how to authenticate a REST call from server-side code.
  * This is intended to be run on an agent, event handler, or custom page.
+ * Need the following namespaces for ClaimsIdentity
+ * using System.Security;
+ * using System.Security.Claims;
  */
 
 // get the current URL
