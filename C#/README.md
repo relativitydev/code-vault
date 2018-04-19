@@ -60,4 +60,5 @@ using (IObjectManager objManager = svcFactory.CreateProxy<IObjectManager>())
 * [DataGen.cs](DataGen.cs) - uploads a large number of documents to a given workspace
 * [PrintPermissions.cs](PrintPermissions.cs) - uses the `IPermissionManager` interface to print out permissions
 * [RestOnServer.cs](RestOnServer.cs) - demonstrates how to authenticate a REST call from the server without user credentials
+* [QuerySubset.cs](QuerySubset.cs) - pages through documents with multiple requests
 
