@@ -11,6 +11,7 @@ For simple ad-hoc tests, you can paste these samples into your browser's develop
 * [add-event-listener.js](add-event-listener.js) - adds an event listener to a drop-down menu
 * [display-decimal.js](display-decimal.js) - rounds a decimal field to a given number of places on the front end
 * [get-filtered-docs.js](get-filtered-docs.js) - returns the IDs of the current documents in the viewer queue
+* [ping.js](ping.js) - pings Object Manager
 * [preview-permissions.js](preview-permissions.js) - previews group permissions in the UI for the end-user
 * [prime-doc-review.js](prime-doc-review.js) - sends a list of document IDs to the document viewer queue
 
