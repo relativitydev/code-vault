@@ -17,6 +17,7 @@ More info:
 * [get-filtered-docs.js](get-filtered-docs.js) - returns the IDs of the current documents in the viewer queue
 * [ping.js](ping.js) - pings Object Manager
 * [prime-doc-review.js](prime-doc-review.js) - sends a list of document IDs to the document viewer queue
+* [test-obj-manager.js](test-obj-manager.js) - queries the first 25 documents with object manager
 
 ### AMDs (Asynchronous Module Definitions)
 * [get-doc-list.js](amd/get-doc-list.js) - reveals a point where you can access the current document list queue
