@@ -19,4 +19,4 @@ More info:
 * [prime-doc-review.js](prime-doc-review.js) - sends a list of document IDs to the document viewer queue
 
 ### AMDs (Asynchronous Module Definitions)
-* [amd/get-doc-list.js](get-doc-list.js) - reveals a point where you can access the current document list queue
+* [get-doc-list.js](amd/get-doc-list.js) - reveals a point where you can access the current document list queue
