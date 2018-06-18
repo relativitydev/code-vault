@@ -15,6 +15,7 @@ More info:
 * [add-event-listener.js](add-event-listener.js) - adds an event listener to a drop-down menu
 * [display-decimal.js](display-decimal.js) - rounds a decimal field to a given number of places on the front end
 * [get-filtered-docs.js](get-filtered-docs.js) - returns the IDs of the current documents in the viewer queue
+* [hide-pagination.js](hide-pagination.js) - hides the pagination controls in the default document viewer
 * [ping.js](ping.js) - pings Object Manager
 * [prime-doc-review.js](prime-doc-review.js) - sends a list of document IDs to the document viewer queue
 * [test-obj-manager.js](test-obj-manager.js) - queries the first 25 documents with object manager
