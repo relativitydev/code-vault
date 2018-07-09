@@ -18,9 +18,9 @@ define(function () {
 
                             // add the extra field
                             payload.request.fields.push({
-                            "Name": FIELD_NAME,
-                            "ArtifactID": 0,                        
-                            "Guids":[]
+                                "Name": FIELD_NAME,
+                                "ArtifactID": 0,                        
+                                "Guids":[]
                             });
 
                             var workspaceId = itemListDataSourceParams.workspaceId;
