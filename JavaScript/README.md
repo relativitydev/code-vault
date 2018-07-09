@@ -23,3 +23,4 @@ More info:
 ### AMDs (Asynchronous Module Definitions)
 * [get-doc-list.js](amd/get-doc-list.js) - reveals a point where you can access the current document list queue
 * [load-cdn.js](amd/load-cdn.js) - shows how to load Bootstrap from a CDN
+* [object-mgr.js](object-mgr.js) - shows how to perform an Object Manager query without explicit use of AJAX/jQuery
