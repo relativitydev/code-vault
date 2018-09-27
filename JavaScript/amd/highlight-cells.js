@@ -5,7 +5,7 @@ define(function() {
     var api = api;
 
     /*
-     * Highlights the text if the document is responsive
+     * Highlights a cell if the document is responsive
      */
     function responsiveFormatter(cellValue, options, rowObject, formatterApi) {
       var data,
@@ -23,7 +23,7 @@ define(function() {
         resultHtml = selectedChoice;
       }
       if (selectedChoice === "Responsive") {
-        resultHtml = `<strong>${resultHtml}</strong>`; // add bold
+        resultHtml = `<div style="background-color:#fdff9b">${resultHtml}</div>`; // add effect
       }
       // otherwise, leave as is
       return resultHtml;
