@@ -13,6 +13,7 @@ More info:
 ## File Descriptions
 
 * [add-event-listener.js](add-event-listener.js) - adds an event listener to a drop-down menu
+* [change-font.js](change-font.js) - creates a drop-down menu that changes the font of the layout
 * [display-decimal.js](display-decimal.js) - rounds a decimal field to a given number of places on the front end
 * [get-filtered-docs.js](get-filtered-docs.js) - returns the IDs of the current documents in the viewer queue
 * [hide-pagination.js](hide-pagination.js) - hides the pagination controls in the default document viewer
