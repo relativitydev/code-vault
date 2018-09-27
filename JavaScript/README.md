@@ -22,6 +22,6 @@ More info:
 
 ### AMDs (Asynchronous Module Definitions)
 * [get-doc-list.js](amd/get-doc-list.js) - reveals a point where you can access the current document list queue
-* [highlight-cells.js](amd/highlight-cells.js) - displays "Responsive" documents in bold
+* [highlight-cells.js](amd/highlight-cells.js) - displays "Responsive" documents in a highlighted cell
 * [load-cdn.js](amd/load-cdn.js) - shows how to load Bootstrap from a CDN
 * [object-mgr.js](amd/object-mgr.js) - shows how to perform an Object Manager query without explicit use of AJAX/jQuery
