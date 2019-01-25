@@ -3,8 +3,7 @@
 /*
  * Enables a textbox with the given ID
  */ 
-function enableTextbox(textboxId)
-{
+function enableTextbox(textboxId) {
     var textbox = document.getElementById(textboxId);
     if (textbox != null)
         textbox.disabled = false;
@@ -15,8 +14,7 @@ function enableTextbox(textboxId)
 /*
  * Disables a textbox with the given ID
  */ 
-function disableTextbox(textboxId)
-{
+function disableTextbox(textboxId) {
     var textbox = document.getElementById(textboxId);
     if (textbox != null)
         textbox.disabled = true;
@@ -28,19 +26,15 @@ function disableTextbox(textboxId)
  * Checks if the drop-down is selecting a given string. If so, 
  * it enables a textbox.
  */
-function enableTextboxOnSelection(selection, dropDownId, textboxId)
-{
+function enableTextboxOnSelection(selection, dropDownId, textboxId) {
     var drop = document.getElementById(dropDownId);
     // get the selected text
-    if (drop != null)
-    {
+    if (drop != null) {
         var selectedText = drop.options[drop.selectedIndex].innerText;
-        if (selectedText == selection)
-        {
+        if (selectedText == selection) {
             enableTextbox(textboxId);
         }
-        else
-        {
+        else {
             disableTextbox(textboxId);
         }
     }
@@ -50,8 +44,7 @@ function enableTextboxOnSelection(selection, dropDownId, textboxId)
  * Adds an event listener that enables a textbox if the user selects "Responsive"
  * from the drop-down menu. Otherwise, it disables the textbox.
  */ 
-function addEventListenerToDropDown()
-{
+function addEventListenerToDropDown() {
     // IDs are subject to change if the layout changes
     const textboxId = "_documentProfileEditor__kCuraScrollingDiv_dynamicViewRenderer_ctl02_int32TextBox_textBox";
     const dropDownId = "_documentProfileEditor__kCuraScrollingDiv_dynamicViewRenderer_ctl04_dropDownList";
@@ -61,8 +54,7 @@ function addEventListenerToDropDown()
 
     // get the drop-down element
     var dropDown = document.getElementById(dropDownId);
-    if (dropDown != null)
-    {
+    if (dropDown != null) {
         // on drop-down selection change, disable or enable a textbox
         // depending on the user selection
         dropDown.addEventListener("change", function() { 
@@ -71,7 +63,6 @@ function addEventListenerToDropDown()
     } 
 }
 
-function test()
-{
+function test() {
     addEventListenerToDropDown();
 }
