@@ -3,14 +3,12 @@
  * the user will only come across these documents
  * when hitting the "next" or "back" button 
  */ 
-function limitDocList(docIds)
-{
+function limitDocList(docIds) {
     var baseUrl = document.location.origin;
     // specify the URL we are to return to after
     var returnUrl = document.location.href; // or specify custom page URL
     var url = baseUrl + "/Relativity/PageBaseService.asmx/PrimeDocReview";
-    var settings = 
-    {
+    var settings = {
         IdList: docIds,
         Url: returnUrl,
         SourceType: 4,
@@ -33,19 +31,14 @@ function limitDocList(docIds)
 
     // authentication is taken care of
     xhttp.send(payload);
-    xhttp.onreadystatechange = function ()
-    {
+    xhttp.onreadystatechange = function () {
         var DONE = 4; // readyState 4 means the request is done.
         var OK = 200; // status 200 is a successful return.
-        if (xhttp.readyState === DONE)
-        {
-            if (xhttp.status === OK)
-            {
+        if (xhttp.readyState === DONE) {
+            if (xhttp.status === OK) {
                 console.log("output: ")
                 console.log(xhttp.responseText); // 'This is the output.'
-            } 
-            else
-            {
+            } else {
                 console.log("Error: " + xhttp.status); // An error occurred during the request.
             }
         }
@@ -53,8 +46,7 @@ function limitDocList(docIds)
 }
 
 
-function test()
-{
+function test() {
     var documents = [1041525, 1041527];
     limitDocList(documents);
 }
