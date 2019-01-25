@@ -25,4 +25,5 @@ More info:
 * [get-doc-list.js](amd/get-doc-list.js) - reveals a point where you can access the current document list queue
 * [highlight-cells.js](amd/highlight-cells.js) - displays "Responsive" documents in a highlighted cell
 * [load-cdn.js](amd/load-cdn.js) - shows how to load Bootstrap from a CDN
+* [modal-window.js](amd/modal-window.js) - demonstrates how to override the "New Item" button for an RDO and display a modal window
 * [object-mgr.js](amd/object-mgr.js) - shows how to perform an Object Manager query without explicit use of AJAX/jQuery
