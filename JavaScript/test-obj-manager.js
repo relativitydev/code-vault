@@ -5,26 +5,25 @@
  */
 
 /*
- * Old object manager
+ * Newer versions of object manager (~Feb 2018 or later)
  */
-function test_query(workspaceId)
-{
-    var url = `/Relativity.Rest/API/Relativity.Objects/workspaces/${workspaceId}/objects/query`;
+function test_query_new(workspaceId) {
+    // new URL
+    var url = `/Relativity.Rest/API/Relativity.Objects/workspace/${workspaceId}/object/query`;
 
-    // simple query
+    // new payload
     var payload = {
-        "artifactType": {
-            "descriptorArtifactTypeID":10
-        },
-        "query": {
+        "request": {
+            "objectType":{"artifactTypeID":10},
             "fields":[],
             "condition":"",
             "rowCondition":"",
-            "sorts":[]
+            "sorts":[],
+            "includeIdWindow":true          
         },
         "start":1,
-        "length":25,
-    };
+        "length":25
+    }
 
     $.ajax({
         url: url,
@@ -44,26 +43,25 @@ function test_query(workspaceId)
 
 
 /*
- * Newer versions of object manager (~Feb 2018 or later)
+ * Old object manager (DO NOT USE)
  */
-function test_query_new(workspaceId)
-{
-    // new URL
-    var url = `/Relativity.Rest/API/Relativity.Objects/workspace/${workspaceId}/object/query`;
+function test_query(workspaceId) {
+    var url = `/Relativity.Rest/API/Relativity.Objects/workspaces/${workspaceId}/objects/query`;
 
-    // mew payload
+    // simple query
     var payload = {
-        "request": {
-            "objectType":{"artifactTypeID":10},
+        "artifactType": {
+            "descriptorArtifactTypeID":10
+        },
+        "query": {
             "fields":[],
             "condition":"",
             "rowCondition":"",
-            "sorts":[],
-            "includeIdWindow":true          
+            "sorts":[]
         },
         "start":1,
-        "length":25
-    }
+        "length":25,
+    };
 
     $.ajax({
         url: url,
