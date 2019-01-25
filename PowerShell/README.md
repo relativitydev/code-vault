@@ -1,8 +1,5 @@
 # PowerShell
 A collection of PowerShell scripts for Relativity
 
-## About
-
-## How to Use
-
 ## File Descriptions
+[query_processing_sets.ps1](query_processing_sets.ps1) - uses Object Manager to query Processing Sets
