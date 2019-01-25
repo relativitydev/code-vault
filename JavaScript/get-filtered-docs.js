@@ -3,8 +3,7 @@
  * currently in queue for the viewer. 
  * NOTE: must be run from inside the Review.aspx page
  */ 
-function getFilteredDocIds()
-{
+function getFilteredDocIds() {
     var baseUrl = document.location.origin;
     var url = baseUrl + "/Relativity/Case/Document/Review.aspx/GetArtifactIdList";
 
@@ -22,19 +21,15 @@ function getFilteredDocIds()
 
     // authentication is taken care of
     xhttp.send(payload);
-    xhttp.onreadystatechange = function ()
-    {
+    xhttp.onreadystatechange = function () {
         var DONE = 4; // readyState 4 means the request is done.
         var OK = 200; // status 200 is a successful return.
-        if (xhttp.readyState === DONE)
-        {
-            if (xhttp.status === OK)
-            {
+        if (xhttp.readyState === DONE) {
+            if (xhttp.status === OK) {
                 console.log("output: ")
                 console.log(xhttp.responseText); // 'This is the output.'
             } 
-            else
-            {
+            else {
                 console.log("Error: " + xhttp.status); // An error occurred during the request.
             }
         }
