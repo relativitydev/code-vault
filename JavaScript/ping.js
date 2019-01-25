@@ -1,8 +1,7 @@
 /*
  * This function pings the object manager to make sure it's alive
  */
-function ping()
-{
+function ping() {
     var endpoint = "/Relativity.Rest/API/protocol_2.0_sr/Relativity.Objects/workspaces/-1/objects/query/ping?";
     
     // get ticks
