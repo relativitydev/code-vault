@@ -2,8 +2,7 @@
  * Gets the DOM id of a decimal type field by name
  * when the layout is NOT in edit mode (i.e. read-only mode)
  */
-function getDecimalFieldId(fieldName)
-{
+function getDecimalFieldId(fieldName) {
     // sample format:
     // _dynamicTemplate__kCuraScrollingDiv__dynamicViewFieldRenderer_ctl02_decimalTextBox_readOnlyValue
     var left = "_dynamicTemplate__kCuraScrollingDiv__dynamicViewFieldRenderer_ctl";
@@ -12,11 +11,9 @@ function getDecimalFieldId(fieldName)
     var id = "";  // 01, 02, etc.
     var labels = document.getElementsByClassName("dynamicViewFieldName");
     // iterate through the labels and find the one that has the fieldName in it
-    for (var i = 0; i < labels.length; i++)
-    {
+    for (var i = 0; i < labels.length; i++) {
         var label = labels[i];
-        if (label.innerText == fieldName + ":")
-        {
+        if (label.innerText == fieldName + ":") {
             var labelId = label.id;
             var idArr = labelId.match(/\d/g);
             id = idArr.join("");
@@ -24,8 +21,7 @@ function getDecimalFieldId(fieldName)
         }
     }
 
-    if (id == "")
-    {
+    if (id == "") {
         return ""; // return empty if not found
     }
     return left + id + right;
@@ -35,8 +31,7 @@ function getDecimalFieldId(fieldName)
 /*
  * Helper method to round a number
  */ 
-function roundUsing(number, prec) 
-{
+function roundUsing(number, prec) {
     var tempnumber = number * Math.pow(10, prec);
     tempnumber = Math.round(tempnumber);
     return tempnumber / Math.pow(10, prec);
@@ -48,12 +43,10 @@ function roundUsing(number, prec)
  * If the specified length is greater than the extant precision, 
  * we pad it with zeroes.
  */ 
-function displayDecimal(numPlaces = 4)
-{
+function displayDecimal(numPlaces = 4) {
     const myDecFieldName = "Air Speed"; // name of decimal field
     var myDecFieldId = getDecimalFieldId(myDecFieldName);
-    if (myDecFieldId != "")
-    {
+    if (myDecFieldId != "") {
         // get the DOM element
         var myDecField = document.getElementById(myDecFieldId);
         var text = myDecField.innerText;
@@ -61,30 +54,26 @@ function displayDecimal(numPlaces = 4)
         // split the string along the decimal point and concentrate
         // on the right side
         var split = text.split(".");
-        if (split.length != 2)
-        {
+        if (split.length != 2) {
             // weird, because should be 2
             console.log("Not a valid decimal field!");
             return;
         }
         // get current decimal length
         var length = split[1].length;
-        if (numPlaces > length)
-        {
+        if (numPlaces > length) {
             // pad with zeroes
             let diff = numPlaces - length;
             let pad = "0".repeat(diff);  // "0000..."
             myDecField.innerText = text + pad;
         }
-        else if (numPlaces < length)
-        {
+        else if (numPlaces < length) {
             var num = parseFloat(text);
             var rounded = roundUsing(num, numPlaces);
             var roundedAsStr = rounded.toString();
             // pad with zeroes if needed
             var roundedSplit = roundedAsStr.split(".");
-            if (roundedSplit.length == 1)
-            {
+            if (roundedSplit.length == 1) {
                 // this means we have rounded to a whole number
                 let pad = "0".repeat(numPlaces);
                 myDecField.innerText = roundedAsStr + "." + pad;
@@ -92,22 +81,19 @@ function displayDecimal(numPlaces = 4)
             }
             // check if we are still short
             let diff = numPlaces - roundedSplit[1].length; 
-            if (diff > 0)
-            {
+            if (diff > 0) {
                 // pad with zeroes
                 let pad = "0".repeat(diff);
                 myDecField.innerText = roundedAsStr + pad;
             }
-            else
-            {
+            else {
                 myDecField.innerText = roundedAsStr;
             }
         }
         // do nothing if specified length is equal to original length
     }
 
-    else
-    {
+    else {
         console.log(`Unable to find field with name ${myDecFieldName}`);
     }
 }
